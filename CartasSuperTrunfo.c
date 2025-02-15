@@ -35,8 +35,8 @@ printf("Digite o número de pontos turísticos:\n");
 scanf("%d", &turismo);
 
 
-
-printf("Carta: %c %d\n", estado, cod);
+printf("Estado: %c\n", estado);
+printf("Código da carta: %c %d\n", estado, cod);
 printf("Cidade: %s\n", cid);
 printf("População: %d\n", populacao);
 printf("Área: %d\n", area);
