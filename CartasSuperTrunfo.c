@@ -6,10 +6,18 @@
 int main() {
 
 
-int populacao, area, pib, turismo;
-char cid[20];
+int populacao, area, pib, turismo, cod;
+char estado;
+char cid[50];
 
 
+
+
+printf("Digite a letra do Carta:\n");
+scanf("%c", &estado);
+
+printf("Digite o código da Cidade:\n");
+scanf("%d", &cod);
 
 printf("Digite o nome da Cidade:\n");
 scanf("%s", &cid);
@@ -28,8 +36,7 @@ scanf("%d", &turismo);
 
 
 
-
-
+printf("Carta: %c %d\n", estado, cod);
 printf("Cidade: %s\n", cid);
 printf("População: %d\n", populacao);
 printf("Área: %d\n", area);
