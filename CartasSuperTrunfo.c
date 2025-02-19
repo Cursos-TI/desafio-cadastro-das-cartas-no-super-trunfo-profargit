@@ -6,43 +6,53 @@
 int main() {
 
 
-int populacao, area, pib, turismo, cod;
+int populacao, ptur;
+float area, pib;
 char estado;
-char cid[50];
+char cod[2];
+char cidade[20];
+float densidade, percapi;
 
 
 
 
-printf("Digite a letra do Carta:\n");
+printf("Digite a letra do Estado: \n");
 scanf("%c", &estado);
 
-printf("Digite o código da Cidade:\n");
-scanf("%d", &cod);
+printf("Digite o número da Carta: \n");
+scanf("%s", &cod);
 
-printf("Digite o nome da Cidade:\n");
-scanf("%s", &cid);
+printf("Digite o nome da Cidade: \n");
+scanf("%s", &cidade);
 
-printf("Digite a população:\n");
+printf("Digite a população: \n");
 scanf("%d", &populacao);
 
-printf("Digite a área:\n");
-scanf("%d", &area);
+printf("Digite a área(Km²): \n");
+scanf("%f", &area);
 
-printf("Digite o PIB:\n");
-scanf("%d", &pib);
+printf("Digite o PIB(bilhões de reais): \n");
+scanf("%f", &pib);
 
-printf("Digite o número de pontos turísticos:\n");
-scanf("%d", &turismo);
+printf("Digite o número de pontos turísticos: \n");
+scanf("%d", &ptur);
+
+
+pib *= 1000000000;
+densidade  = (float) populacao / area;
+percapi = (float) pib / populacao;
+
 
 
 printf("Estado: %c\n", estado);
-printf("Código da carta: %c %d\n", estado, cod);
-printf("Cidade: %s\n", cid);
+printf("Código da carta: %c%s \n", estado, cod);
+printf("Cidade: %s\n", cidade);
 printf("População: %d\n", populacao);
-printf("Área: %d\n", area);
-printf("PIB: %d\n", pib);
-printf("Pontos turísticos: %d\n", turismo);
-
+printf("Área(Km²): %.2f\n", area);
+printf("PIB(Bilhões de reais): %.2f\n", pib);
+printf("Pontos turísticos: %d\n", ptur);
+printf("Densidade populacional(hab/Km²): %.2f\n", densidade);
+printf("PIB per capita(reais): %.2f\n", percapi);
 
     
     
